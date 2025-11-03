@@ -55,6 +55,17 @@ Add the following line of code to the end of `tools/index.js`:
 export { getProjectsTool } from "./get-projects.js";
 ```
 
+### (Optional) Test Get Projects Tool in Visual Studio Code
+
+If you've configured your MCP server in Visual Studio Code, you can already test the first tool:
+
+- Start the MCP server by clicking the **Start** label in `.vscode/mcp.json`
+- Open GitHub Copilot Chat
+  - Click the **Toggle Chat** icon next to the search bar at the top of the window, or
+  - Press `Cmd+Shift+I` (macOS) or `Ctrl+Shift+I` (Windows/Linux)
+- Try the following prompt: `What projects do I have access to?`
+- Stop the MCP server by clicking the **Stop** label in `.vscode/mcp.json`
+
 ## Get Folder Contents
 
 The next tool we will implement is the **Get Folder Contents** tool. This tool will return a list of folders and files at the root of a given project, or in a specific folder.
@@ -108,6 +119,12 @@ Add the following line of code to the end of `tools/index.js`:
 export { getFolderContentsTool } from "./get-folder-contents.js";
 ```
 
+### (Optional) Test Get Folder Contents Tool in Visual Studio Code
+
+- Start the MCP server
+- Try the following prompt: `List all *.rvt files in project XYZ`
+- Stop the MCP server
+
 ## Get Issues
 
 Next, we will implement the **Get Issues** tool. This tool will return a list of issues for a given project.
@@ -147,6 +164,12 @@ Add the following line of code to the end of `tools/index.js`:
 ```javascript
 export { getIssuesTool } from "./get-issues.js";
 ```
+
+### (Optional) Test Get Issues Tool in Visual Studio Code
+
+- Start the MCP server
+- Try the following prompt: `Any issues reported in project XYZ?`
+- Stop the MCP server
 
 ## Get Issue Types
 
@@ -202,6 +225,12 @@ export { getFolderContentsTool } from "./get-folder-contents.js";
 export { getIssuesTool } from "./get-issues.js";
 export { getIssueTypesTool } from "./get-issue-types.js";
 ```
+
+### (Optional) Test Get Issue Types Tool in Visual Studio Code
+
+- Start the MCP server
+- Try the following prompt: `What types of issues can be reported in project XYZ?`
+- Stop the MCP server
 
 ## Try it out
 

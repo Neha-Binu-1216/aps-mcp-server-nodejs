@@ -4,7 +4,7 @@ In this part of the tutorial you will:
 
 - Create a new Node.js project
 - Install required dependencies
-- Implement configuration management
+- Collect required inputs
 - Build the authentication layer
 - Set up an MCP server
 - Verify the implementation
@@ -251,3 +251,30 @@ After that, click the **Connect** button.
 The status under the **Connect** button should now say **Connected**, and the main page should contain a message saying **The connected server does not support any MCP capabilities**. This is expected - we have not implemented any capabilities in our MCP server yet but we've confirmed that we can connect to it.
 
 ![MCP Inspector Connected](images/mcp-inspector-connected.png)
+
+### (Optional) Setup Visual Studio Code
+
+At the end of this tutorial we will cover the installation and usage of our MCP server in various MCP clients. However, if you're using Visual Studio Code, consider configuring the server now so that you can test it as you're building it:
+
+- Make sure you have [enabled MCP servers in Visual Studio Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_enable-mcp-support-in-vs-code)
+- Create `.vscode/mcp.json` file in the root folder of your project, and add the following JSON to it:
+
+```json
+{
+  "servers": {
+    "aps-mcp-server-nodejs": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "server.js"
+      ]
+    }
+  }
+}
+```
+
+- A small **Start** label should appear right above the server name:
+
+![VS Code mcp.json file](images/vscode-mcp-json.png)
+
+- Click the **Start** label to make sure the MCP server can be started, and then click on the **Stop** label to stop it
